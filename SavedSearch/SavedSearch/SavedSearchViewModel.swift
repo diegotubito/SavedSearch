@@ -18,14 +18,14 @@ struct SavedFilterExclusionModel: Codable {
 }
 
 class SavedSearchViewModel: ObservableObject {
-    @Published var savedFilterExclusions: [SavedFilterExclusionModel]
+    var savedFilterExclusions: [SavedFilterExclusionModel]
     
     init(savedFilterExclusions: [SavedFilterExclusionModel] = []) {
         self.savedFilterExclusions = savedFilterExclusions
     }
     
     private var filterExclusionCategories: [FilterExclusionCategoryModel] = []
-    private var responseData: Data?
+    private var filterExclusionResponseData: Data?
     
     func getFilterExclusionCategories() -> [FilterExclusionCategoryModel] {
         return filterExclusionCategories
@@ -37,7 +37,7 @@ class SavedSearchViewModel: ObservableObject {
             switch result {
             case .success(let response):
                 DispatchQueue.main.async {
-                    self.responseData = response
+                    self.filterExclusionResponseData = response
                     self.mapFilterExclusion()
                 }
             case .failure(let error):
@@ -49,7 +49,7 @@ class SavedSearchViewModel: ObservableObject {
     }
     
     func mapFilterExclusion() {
-        guard let responseData = responseData, let dictionary = try? JSONSerialization.jsonObject(with: responseData) as? [String: Any],
+        guard let responseData = filterExclusionResponseData, let dictionary = try? JSONSerialization.jsonObject(with: responseData) as? [String: Any],
               let data = dictionary["data"] as? [String: Any] else { return }
         
         filterExclusionCategories.removeAll()

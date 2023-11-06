@@ -8,14 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var savedFilterExclusions = [SavedFilterExclusionModel(filterType: "cr__minor_body_damage", value: true)]
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                NavigationLink {
+                    SavedSearchView(viewmodel: SavedSearchViewModel(savedFilterExclusions: savedFilterExclusions))
+                } label: {
+                    Text("go to Saved Serach")
+                }
+                
+            }
+            .onAppear {
+                if savedFilterExclusions.isEmpty {
+                    print("is empty")
+                } else {
+                    for i in savedFilterExclusions {
+                        print(i.filterType, i.value)
+                    }
+                }
+            }
         }
-        .padding()
+        
     }
 }
 

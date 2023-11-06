@@ -14,6 +14,17 @@
 		F139B8342AF60F2200EBFD6A /* SavedSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139B8332AF60F2200EBFD6A /* SavedSearchTests.swift */; };
 		F139B83E2AF60F2200EBFD6A /* SavedSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139B83D2AF60F2200EBFD6A /* SavedSearchUITests.swift */; };
 		F139B8402AF60F2200EBFD6A /* SavedSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139B83F2AF60F2200EBFD6A /* SavedSearchUITestsLaunchTests.swift */; };
+		F139B84D2AF60FDC00EBFD6A /* filter_exclusion_options_response.json in Resources */ = {isa = PBXBuildFile; fileRef = F139B84C2AF60FDC00EBFD6A /* filter_exclusion_options_response.json */; };
+		F139B8502AF693E800EBFD6A /* FilterExclusionOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139B84F2AF693E800EBFD6A /* FilterExclusionOptions.swift */; };
+		F19DABB72AF861D60088CB84 /* MockApiNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19DABB62AF861D60088CB84 /* MockApiNetwork.swift */; };
+		F19DABB92AF861FD0088CB84 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19DABB82AF861FD0088CB84 /* NetworkModel.swift */; };
+		F19DABBB2AF8623D0088CB84 /* ApiNetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19DABBA2AF8623D0088CB84 /* ApiNetworkConfiguration.swift */; };
+		F19DABBD2AF862640088CB84 /* ApiNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19DABBC2AF862640088CB84 /* ApiNetwork.swift */; };
+		F19DABC02AF863310088CB84 /* SavedSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19DABBF2AF863310088CB84 /* SavedSearchView.swift */; };
+		F19DABC22AF863A60088CB84 /* SavedSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19DABC12AF863A60088CB84 /* SavedSearchViewModel.swift */; };
+		F19DABC72AF8645C0088CB84 /* FilterExclusionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19DABC62AF8645C0088CB84 /* FilterExclusionEntity.swift */; };
+		F19DABC92AF864680088CB84 /* FilterExclusionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19DABC82AF864680088CB84 /* FilterExclusionModel.swift */; };
+		F19DABCB2AF864720088CB84 /* FilterExclusionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19DABCA2AF864720088CB84 /* FilterExclusionRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +55,17 @@
 		F139B8392AF60F2200EBFD6A /* SavedSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SavedSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F139B83D2AF60F2200EBFD6A /* SavedSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSearchUITests.swift; sourceTree = "<group>"; };
 		F139B83F2AF60F2200EBFD6A /* SavedSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F139B84C2AF60FDC00EBFD6A /* filter_exclusion_options_response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = filter_exclusion_options_response.json; sourceTree = "<group>"; };
+		F139B84F2AF693E800EBFD6A /* FilterExclusionOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterExclusionOptions.swift; sourceTree = "<group>"; };
+		F19DABB62AF861D60088CB84 /* MockApiNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiNetwork.swift; sourceTree = "<group>"; };
+		F19DABB82AF861FD0088CB84 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		F19DABBA2AF8623D0088CB84 /* ApiNetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiNetworkConfiguration.swift; sourceTree = "<group>"; };
+		F19DABBC2AF862640088CB84 /* ApiNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiNetwork.swift; sourceTree = "<group>"; };
+		F19DABBF2AF863310088CB84 /* SavedSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSearchView.swift; sourceTree = "<group>"; };
+		F19DABC12AF863A60088CB84 /* SavedSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSearchViewModel.swift; sourceTree = "<group>"; };
+		F19DABC62AF8645C0088CB84 /* FilterExclusionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterExclusionEntity.swift; sourceTree = "<group>"; };
+		F19DABC82AF864680088CB84 /* FilterExclusionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterExclusionModel.swift; sourceTree = "<group>"; };
+		F19DABCA2AF864720088CB84 /* FilterExclusionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterExclusionRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +118,11 @@
 			children = (
 				F139B8222AF60F2100EBFD6A /* SavedSearchApp.swift */,
 				F139B8242AF60F2100EBFD6A /* ContentView.swift */,
+				F19DABC32AF864390088CB84 /* Common */,
+				F19DABBE2AF863260088CB84 /* SavedSearch */,
+				F139B84E2AF6936700EBFD6A /* FilterExclusionOptions */,
 				F139B8262AF60F2200EBFD6A /* Assets.xcassets */,
+				F139B84C2AF60FDC00EBFD6A /* filter_exclusion_options_response.json */,
 				F139B8282AF60F2200EBFD6A /* Preview Content */,
 			);
 			path = SavedSearch;
@@ -125,6 +151,61 @@
 				F139B83F2AF60F2200EBFD6A /* SavedSearchUITestsLaunchTests.swift */,
 			);
 			path = SavedSearchUITests;
+			sourceTree = "<group>";
+		};
+		F139B84E2AF6936700EBFD6A /* FilterExclusionOptions */ = {
+			isa = PBXGroup;
+			children = (
+				F139B84F2AF693E800EBFD6A /* FilterExclusionOptions.swift */,
+			);
+			path = FilterExclusionOptions;
+			sourceTree = "<group>";
+		};
+		F19DABB52AF861C40088CB84 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F19DABB62AF861D60088CB84 /* MockApiNetwork.swift */,
+				F19DABBA2AF8623D0088CB84 /* ApiNetworkConfiguration.swift */,
+				F19DABB82AF861FD0088CB84 /* NetworkModel.swift */,
+				F19DABBC2AF862640088CB84 /* ApiNetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F19DABBE2AF863260088CB84 /* SavedSearch */ = {
+			isa = PBXGroup;
+			children = (
+				F19DABBF2AF863310088CB84 /* SavedSearchView.swift */,
+				F19DABC12AF863A60088CB84 /* SavedSearchViewModel.swift */,
+			);
+			path = SavedSearch;
+			sourceTree = "<group>";
+		};
+		F19DABC32AF864390088CB84 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F19DABC42AF8643F0088CB84 /* Datasource */,
+				F19DABB52AF861C40088CB84 /* Network */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F19DABC42AF8643F0088CB84 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				F19DABC52AF8644A0088CB84 /* FilterExclusion */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		F19DABC52AF8644A0088CB84 /* FilterExclusion */ = {
+			isa = PBXGroup;
+			children = (
+				F19DABC62AF8645C0088CB84 /* FilterExclusionEntity.swift */,
+				F19DABC82AF864680088CB84 /* FilterExclusionModel.swift */,
+				F19DABCA2AF864720088CB84 /* FilterExclusionRepository.swift */,
+			);
+			path = FilterExclusion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +314,7 @@
 			files = (
 				F139B82A2AF60F2200EBFD6A /* Preview Assets.xcassets in Resources */,
 				F139B8272AF60F2200EBFD6A /* Assets.xcassets in Resources */,
+				F139B84D2AF60FDC00EBFD6A /* filter_exclusion_options_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +340,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F139B8252AF60F2100EBFD6A /* ContentView.swift in Sources */,
+				F19DABC72AF8645C0088CB84 /* FilterExclusionEntity.swift in Sources */,
+				F19DABB72AF861D60088CB84 /* MockApiNetwork.swift in Sources */,
+				F19DABBB2AF8623D0088CB84 /* ApiNetworkConfiguration.swift in Sources */,
+				F139B8502AF693E800EBFD6A /* FilterExclusionOptions.swift in Sources */,
+				F19DABC02AF863310088CB84 /* SavedSearchView.swift in Sources */,
+				F19DABCB2AF864720088CB84 /* FilterExclusionRepository.swift in Sources */,
+				F19DABB92AF861FD0088CB84 /* NetworkModel.swift in Sources */,
+				F19DABC92AF864680088CB84 /* FilterExclusionModel.swift in Sources */,
+				F19DABC22AF863A60088CB84 /* SavedSearchViewModel.swift in Sources */,
 				F139B8232AF60F2100EBFD6A /* SavedSearchApp.swift in Sources */,
+				F19DABBD2AF862640088CB84 /* ApiNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

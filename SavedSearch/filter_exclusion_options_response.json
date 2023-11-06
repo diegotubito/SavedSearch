@@ -1,0 +1,519 @@
+{
+    "data": {
+        "exterior": {
+            "display": "Exclusion: Exterior",
+            "options": [
+                {
+                    "display": "Minor Body Damage",
+                    "value": "cr__minor_body_damage",
+                    "risky": false
+                },
+                {
+                    "display": "Moderate Body Damage",
+                    "value": "cr__moderate_body_damage",
+                    "risky": true
+                },
+                {
+                    "display": "Major Body Damage",
+                    "value": "cr__major_body_damage",
+                    "risky": true
+                },
+                {
+                    "display": "Glass Damaged/Cracked",
+                    "value": "cr__glass_damage",
+                    "risky": false
+                },
+                {
+                    "display": "Lights Damaged/Cracked",
+                    "value": "cr__lights_damage",
+                    "risky": true
+                },
+                {
+                    "display": "Surface Rust",
+                    "value": "cr__minor_body_rust",
+                    "risky": false
+                },
+                {
+                    "display": "Moderate Rust",
+                    "value": "cr__moderate_body_rust",
+                    "risky": true
+                },
+                {
+                    "display": "Heavy Rust",
+                    "value": "cr__major_body_rust",
+                    "risky": true
+                },
+                {
+                    "display": "Penetrating Rust",
+                    "value": "cr__penetrating_rust",
+                    "risky": false
+                },
+                {
+                    "display": "Hail Damage",
+                    "value": "cr__hail_damage",
+                    "risky": true
+                },
+                {
+                    "display": "Aftermarket Parts",
+                    "value": "cr__aftermarket_parts_exterior",
+                    "risky": false
+                },
+                {
+                    "display": "Poor Quality Repairs",
+                    "value": "cr__poor_quality_repairs",
+                    "risky": true
+                },
+                {
+                    "display": "Previous Repair",
+                    "value": "cr__previous_repair",
+                    "risky": false
+                }
+            ]
+        },
+        "frame": {
+            "display": "Exclusion: Frame & Unibody",
+            "options": [
+                {
+                    "display": "Frame/Unibody Damage",
+                    "value": "cr__frame_damage",
+                    "risky": true
+                },
+                {
+                    "display": "Undercarriage Surface Rust",
+                    "value": "cr__undercarriage_surface_rust",
+                    "risky": false
+                },
+                {
+                    "display": "Undercarriage Heavy Rust",
+                    "value": "cr__undercarriage_heavy_rust",
+                    "risky": true
+                },
+                {
+                    "display": "Penetrating Frame Rust",
+                    "value": "cr__undercarriage_heavy_rot",
+                    "risky": true
+                }
+            ]
+        },
+        "warning_lights": {
+            "display": "Exclusion: Warning Lights",
+            "options": [
+                {
+                    "display": "Check Engine Light",
+                    "value": "cr__check_engine_light",
+                    "risky": false
+                },
+                {
+                    "display": "Airbag Light",
+                    "value": "cr__airbag_light",
+                    "risky": true
+                },
+                {
+                    "display": "Brake/ABS Light",
+                    "value": "cr__brake_light",
+                    "risky": true
+                },
+                {
+                    "display": "Traction Control Light",
+                    "value": "cr__traction_control_light",
+                    "risky": true
+                },
+                {
+                    "display": "TPMS Light",
+                    "value": "cr__tpms_light",
+                    "risky": false
+                },
+                {
+                    "display": "Battery/Charging Light",
+                    "value": "cr__battery_light",
+                    "risky": false
+                },
+                {
+                    "display": "Other Warning Light",
+                    "value": "cr__other_warning_light",
+                    "risky": true
+                }
+            ]
+        },
+        "interior": {
+            "display": "Exclusion: Interior",
+            "options": [
+                {
+                    "display": "Seat Damage",
+                    "value": "cr__seat_damage",
+                    "risky": false
+                },
+                {
+                    "display": "Carpet Damage",
+                    "value": "cr__carpet_damage",
+                    "risky": false
+                },
+                {
+                    "display": "Dashboard Damage",
+                    "value": "cr__dashboard_damage",
+                    "risky": true
+                },
+                {
+                    "display": "Headliner Damage",
+                    "value": "cr__headliner_damage",
+                    "risky": false
+                },
+                {
+                    "display": "Interior Trim Damage",
+                    "value": "cr__interior_trim_damage",
+                    "risky": false
+                },
+                {
+                    "display": "Interior Odor",
+                    "value": "cr__interior_order",
+                    "risky": true
+                },
+                {
+                    "display": "Crank Windows",
+                    "value": "cr__crank_windows",
+                    "risky": true
+                },
+                {
+                    "display": "Not Equipped with Factory A/C",
+                    "value": "cr__no_factory_ac",
+                    "risky": true
+                },
+                {
+                    "display": "Electronics Issue",
+                    "value": "cr__electronics_issue",
+                    "risky": true
+                },
+                {
+                    "display": "Five Digit Odometer",
+                    "value": "cr__five_digit_odometer",
+                    "risky": true
+                },
+                {
+                    "display": "Aftermarket Interior Accessories",
+                    "value": "cr__aftermarket_parts_interior",
+                    "risky": true
+                },
+                {
+                    "display": "Airbag Deployed",
+                    "value": "cr__airbag_deployed",
+                    "risky": true
+                },
+                {
+                    "display": "HVAC Not Working",
+                    "value": "cr__hvac_not_working",
+                    "risky": true
+                }
+            ]
+        },
+        "driveability": {
+            "display": "Exclusion: Driveability",
+            "options": [
+                {
+                    "display": "Vehicle INOP (Does Not Move)",
+                    "value": "cr__vehicle_inop",
+                    "risky": true
+                },
+                {
+                    "display": "Transmission Issue",
+                    "value": "cr__transmission_issue",
+                    "risky": true
+                },
+                {
+                    "display": "4x4/4WD/Drivetrain Issue",
+                    "value": "cr__drivetrain_issue",
+                    "risky": true
+                },
+                {
+                    "display": "Steering Issue",
+                    "value": "cr__steering_issue",
+                    "risky": true
+                },
+                {
+                    "display": "Brake Issue",
+                    "value": "cr__break_issue",
+                    "risky": true
+                },
+                {
+                    "display": "Suspension Issue",
+                    "value": "cr__suspension_issue",
+                    "risky": true
+                }
+            ]
+        },
+        "wheels_tires": {
+            "display": "Exclusion: Wheels & Tires",
+            "options": [
+                {
+                    "display": "Aftermarket Rims/Tires",
+                    "value": "cr__aftermarket_wheels",
+                    "risky": false
+                },
+                {
+                    "display": "Damaged Wheels",
+                    "value": "cr__damaged_wheels",
+                    "risky": false
+                },
+                {
+                    "display": "Incorrectly Sized Tires",
+                    "value": "cr__oversized_tires",
+                    "risky": false
+                },
+                {
+                    "display": "Damaged Tires",
+                    "value": "cr__rotted_cracked_tires",
+                    "risky": false
+                },
+                {
+                    "display": "Uneven Tread Wear",
+                    "value": "cr__uneven_tread_wear",
+                    "risky": false
+                },
+                {
+                    "display": "Mismatched Tires",
+                    "value": "cr__mismatched_tires",
+                    "risky": false
+                },
+                {
+                    "display": "Missing Spare Tire and/or Equipment",
+                    "value": "cr__missing_spare_tire",
+                    "risky": false
+                }
+            ]
+        },
+        "mechanicals": {
+            "display": "Exclusion: Mechanicals",
+            "options": [
+                {
+                    "display": "Jump Start Required",
+                    "value": "cr__jump_start_required",
+                    "risky": false
+                },
+                {
+                    "display": "Engine Does Not Crank",
+                    "value": "cr__engine_does_not_crank",
+                    "risky": true
+                },
+                {
+                    "display": "Engine Cranks, Does Not Start",
+                    "value": "cr__engine_does_not_start",
+                    "risky": true
+                },
+                {
+                    "display": "Engine Does Not Stay Running",
+                    "value": "cr__engine_does_not_stay_running",
+                    "risky": true
+                },
+                {
+                    "display": "Internal Engine Noise",
+                    "value": "cr__engine_noise",
+                    "risky": true
+                },
+                {
+                    "display": "Engine Runs Rough/Hesitation",
+                    "value": "cr__engine_hesitation",
+                    "risky": true
+                },
+                {
+                    "display": "Timing Chain/Camshaft Issue",
+                    "value": "cr__timing_chain_issue",
+                    "risky": true
+                },
+                {
+                    "display": "Excessive Smoke From Exhaust",
+                    "value": "cr__abnormal_exhaust_smoke",
+                    "risky": true
+                },
+                {
+                    "display": "Head Gasket Issue",
+                    "value": "cr__head_gasket_issue",
+                    "risky": true
+                },
+                {
+                    "display": "Excessive Exhaust Noise",
+                    "value": "cr__exhaust_noise",
+                    "risky": true
+                },
+                {
+                    "display": "Exhaust Modifications",
+                    "value": "cr__exhaust_modifications",
+                    "risky": true
+                },
+                {
+                    "display": "Suspension Modifications",
+                    "value": "cr__suspension_modifications",
+                    "risky": false
+                },
+                {
+                    "display": "Emissions Modifications",
+                    "value": "cr__emissions_modifications",
+                    "risky": true
+                },
+                {
+                    "display": "Catalytic Converters Missing",
+                    "value": "cr__catalytic_converters_missing",
+                    "risky": true
+                },
+                {
+                    "display": "Aftermarket Parts",
+                    "value": "cr__aftermarket_parts_mechanical",
+                    "risky": false
+                },
+                {
+                    "display": "Engine Accessory Issue",
+                    "value": "cr__engine_accessory_issue",
+                    "risky": true
+                },
+                {
+                    "display": "Actively Dripping Oil Leak",
+                    "value": "cr__fluid_leaks",
+                    "risky": true
+                },
+                {
+                    "display": "Oil/Coolant Intermix on Dipstick",
+                    "value": "cr__oil_intermix_dipstick_v2",
+                    "risky": true
+                }
+            ]
+        },
+        "title_history": {
+            "display": "Exclusion: Title & History",
+            "options": [
+                {
+                    "display": "Title Absent (30 Days)",
+                    "value": "cr__title_absent",
+                    "risky": false
+                },
+                {
+                    "display": "Branded Title",
+                    "value": "cr__branded_title",
+                    "risky": true
+                },
+                {
+                    "display": "True Mileage Unknown",
+                    "value": "cr__true_mileage_unknown",
+                    "risky": true
+                },
+                {
+                    "display": "Repair Order Attached",
+                    "value": "cr__repair_order_attached",
+                    "risky": false
+                },
+                {
+                    "display": "Repossession Papers With Title",
+                    "value": "cr__repossession",
+                    "risky": true
+                },
+                {
+                    "display": "Repossession Papers With Title",
+                    "value": "cr__repossession_papers_wo_title",
+                    "risky": true
+                }
+            ]
+        },
+        "title_announcements": {
+            "display": "Exclusion: Vehicle Announcements",
+            "options": [
+                {
+                    "display": "Damage Disclosure",
+                    "value": "carfax__damage_disclosure",
+                    "risky": true
+                },
+                {
+                    "display": "Theft",
+                    "value": "carfax__theft",
+                    "risky": true
+                },
+                {
+                    "display": "Flood Damage",
+                    "value": "carfax__flood_damage",
+                    "risky": true
+                },
+                {
+                    "display": "Junk Title",
+                    "value": "carfax__junk_title",
+                    "risky": true
+                },
+                {
+                    "display": "Exceeds Mechanical Limits Title",
+                    "value": "carfax__exceeds_mechanical_limits_title",
+                    "risky": true
+                },
+                {
+                    "display": "Mileage Discrepancy",
+                    "value": "carfax__mileage_discrepancy",
+                    "risky": true
+                },
+                {
+                    "display": "Hail Damage Title",
+                    "value": "carfax__hail_damage_title",
+                    "risky": true
+                },
+                {
+                    "display": "Fire Damage",
+                    "value": "carfax__fire_damage",
+                    "risky": true
+                },
+                {
+                    "display": "Salvage Title",
+                    "value": "carfax__salvage_title",
+                    "risky": true
+                },
+                {
+                    "display": "Dismantled Title",
+                    "value": "carfax__dismantled_title",
+                    "risky": true
+                },
+                {
+                    "display": "Not Actual Mileage Title",
+                    "value": "carfax__not_actual_mileage_title",
+                    "risky": true
+                },
+                {
+                    "display": "Total Loss",
+                    "value": "carfax__total_loss",
+                    "risky": true
+                },
+                {
+                    "display": "Lemon Title",
+                    "value": "carfax__lemon_title",
+                    "risky": true
+                },
+                {
+                    "display": "Open Recall",
+                    "value": "carfax__open_recall",
+                    "risky": true
+                },
+                {
+                    "display": "Rebuilt Title",
+                    "value": "carfax__rebuilt_title",
+                    "risky": true
+                },
+                {
+                    "display": "Recovered Theft",
+                    "value": "carfax__recovered_theft",
+                    "risky": true
+                },
+                {
+                    "display": "Airbag Deployment",
+                    "value": "carfax__airbag_deployment",
+                    "risky": true
+                },
+                {
+                    "display": "Structural Damage",
+                    "value": "carfax__structural_damage",
+                    "risky": true
+                },
+                {
+                    "display": "Reconstructed Title",
+                    "value": "carfax__reconstructed_title",
+                    "risky": true
+                },
+                {
+                    "display": "Previous Canadian",
+                    "value": "carfax__previous_canadian",
+                    "risky": true
+                }
+            ]
+        }
+    }
+}

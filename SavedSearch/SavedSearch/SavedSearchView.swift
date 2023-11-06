@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SavedSearchView: View {
-    @StateObject var viewmodel: SavedSearchViewModel
+    var viewmodel: SavedSearchViewModel
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -19,7 +19,7 @@ struct SavedSearchView: View {
             }
             
             NavigationLink {
-                FilterExclusionOptions()
+                FilterExclusionCategoryView(viewmodel: viewmodel)
             } label: {
                 Text("Exclusion Filters")
             }

@@ -5,7 +5,7 @@
 //  Created by David Diego Gomez on 05/11/2023.
 //
 
-import Foundation
+import SwiftUI
 
 struct SavedFilterExclusionModel: Codable {
     let filterType: String
@@ -18,16 +18,16 @@ struct SavedFilterExclusionModel: Codable {
 }
 
 class SavedSearchViewModel: ObservableObject {
-    var savedFilterExclusions: [SavedFilterExclusionModel]?
+    @Published var savedFilterExclusions: [SavedFilterExclusionModel]
     
-    init(savedFilterExclusions: [SavedFilterExclusionModel]?) {
+    init(savedFilterExclusions: [SavedFilterExclusionModel] = []) {
         self.savedFilterExclusions = savedFilterExclusions
     }
     
-    private var filterExclusionCategories: [FilterExclusionCategory] = []
+    private var filterExclusionCategories: [FilterExclusionCategoryModel] = []
     private var responseData: Data?
-        
-    func getFilterExclusionCategories() -> [FilterExclusionCategory] {
+    
+    func getFilterExclusionCategories() -> [FilterExclusionCategoryModel] {
         return filterExclusionCategories
     }
     
@@ -59,28 +59,52 @@ class SavedSearchViewModel: ObservableObject {
                let display = typeDict["display"] as? String,
                let optionsArray = typeDict["options"] as? [[String: Any]] {
                 
-                let options: [FilterExclusionCategory.Option] = optionsArray.compactMap { optionDict in
+                let options: [FilterExclusionCategoryModel.Option] = optionsArray.compactMap { optionDict in
                     guard let display = optionDict["display"] as? String,
                           let value = optionDict["value"] as? String,
                           let risky = optionDict["risky"] as? Bool else {
                         return nil
                     }
                     //The mapping is constructed with the right selected value if
-                    let isSelected = savedFilterExclusions?.contains(where: {$0.filterType == value}) ?? false
-                    return FilterExclusionCategory.Option(display: display, value: value, risky: risky, isSelected: isSelected)
+                    let isSelected = savedFilterExclusions.contains(where: {$0.filterType == value}) ?? false
+                    return FilterExclusionCategoryModel.Option(display: display, value: value, risky: risky, isSelected: isSelected)
                 }
+                
+                // Sort options alphabetically by their 'display' property
+                let sortedOptions = options.sorted { $0.display.localizedCaseInsensitiveCompare($1.display) == .orderedAscending }
                 
                 // Remove "Exclusion: " from the display string
                 let modifiedDisplay = display.replacingOccurrences(of: "Exclusion: ", with: "")
-
-                let category = FilterExclusionCategory(type: typeKey, display: modifiedDisplay, options: options)
+                
+                let category = FilterExclusionCategoryModel(type: typeKey, display: modifiedDisplay, options: sortedOptions)
                 filterExclusionCategories.append(category)
             }
         }
+        
+        // Sort options alphabetically by their 'type' property
+        filterExclusionCategories = filterExclusionCategories.sorted { $0.type.localizedCaseInsensitiveCompare($1.type) == .orderedAscending }
     }
     
     func clearAllSelection() {
-        savedFilterExclusions?.removeAll()
+        savedFilterExclusions.removeAll()
+        mapFilterExclusion()
+    }
+    
+    func getCount(_ item: FilterExclusionCategoryModel) -> Int {
+        let counter = item.options.filter { $0.isSelected == true }.count
+        if counter == item.options.count { return -1 }
+        return counter
+    }
+    
+    func selectItem(filterType: String) {
+        let newSelection = SavedFilterExclusionModel(filterType: filterType, value: true)
+        savedFilterExclusions.append(newSelection)
+        mapFilterExclusion()
+    }
+
+    func deselectItem(filterType: String) {
+        savedFilterExclusions.removeAll { $0.filterType == filterType }
+        // After updating the exclusions, re-map the categories to update their selected state
         mapFilterExclusion()
     }
 }

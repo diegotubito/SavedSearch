@@ -9,6 +9,6 @@ import Foundation
 
 struct FilterExclusionEntity {
     struct Response: Decodable {
-        let data: [FilterExclusionCategory]
+        let data: [FilterExclusionCategoryModel]
     }
 }

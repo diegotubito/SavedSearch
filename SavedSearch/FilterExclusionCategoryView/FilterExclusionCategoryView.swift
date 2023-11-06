@@ -17,7 +17,7 @@ struct FilterExclusionCategoryView: View {
                 VStack(alignment: .leading) {
                     ForEach(viewmodel.getFilterExclusionCategories(), id: \.self) { item in
                         NavigationLink {
-                            FilterExlusionOptionView(viewmodel: viewmodel, selectedItem: item)
+                            FilterExlusionOptionView(viewmodel: viewmodel, filterExclusionOptionViewModel: FilterExlusionOptionViewModel(selectedItem: item))
                         } label: {
                             SavedSearchViewCell(title: item.display, subtitle: "", counter: viewmodel.getCount(item))
                         }

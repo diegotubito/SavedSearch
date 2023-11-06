@@ -27,6 +27,7 @@
 		F19DABCB2AF864720088CB84 /* FilterExclusionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19DABCA2AF864720088CB84 /* FilterExclusionRepository.swift */; };
 		F19DABE52AF8907E0088CB84 /* SavedSearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19DABE42AF8907E0088CB84 /* SavedSearchViewCell.swift */; };
 		F19DABE82AF895620088CB84 /* FilterExlusionOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19DABE72AF895620088CB84 /* FilterExlusionOptionView.swift */; };
+		F19DABEA2AF8AA230088CB84 /* FilterExlusionOptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19DABE92AF8AA230088CB84 /* FilterExlusionOptionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		F19DABCA2AF864720088CB84 /* FilterExclusionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterExclusionRepository.swift; sourceTree = "<group>"; };
 		F19DABE42AF8907E0088CB84 /* SavedSearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSearchViewCell.swift; sourceTree = "<group>"; };
 		F19DABE72AF895620088CB84 /* FilterExlusionOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterExlusionOptionView.swift; sourceTree = "<group>"; };
+		F19DABE92AF8AA230088CB84 /* FilterExlusionOptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterExlusionOptionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				F19DABE72AF895620088CB84 /* FilterExlusionOptionView.swift */,
+				F19DABE92AF8AA230088CB84 /* FilterExlusionOptionViewModel.swift */,
 			);
 			path = FilterExclusionOptionView;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F19DABE82AF895620088CB84 /* FilterExlusionOptionView.swift in Sources */,
+				F19DABEA2AF8AA230088CB84 /* FilterExlusionOptionViewModel.swift in Sources */,
 				F139B8252AF60F2100EBFD6A /* ContentView.swift in Sources */,
 				F19DABE52AF8907E0088CB84 /* SavedSearchViewCell.swift in Sources */,
 				F19DABC72AF8645C0088CB84 /* FilterExclusionEntity.swift in Sources */,

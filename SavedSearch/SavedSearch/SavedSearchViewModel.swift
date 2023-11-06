@@ -99,6 +99,7 @@ class SavedSearchViewModel: ObservableObject {
     func selectItem(filterType: String) {
         let newSelection = SavedFilterExclusionModel(filterType: filterType, value: true)
         savedFilterExclusions.append(newSelection)
+        // After updating the exclusions, re-map the categories to update their selected state
         mapFilterExclusion()
     }
 

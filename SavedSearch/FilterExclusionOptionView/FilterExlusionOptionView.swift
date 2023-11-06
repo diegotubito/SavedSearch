@@ -10,12 +10,12 @@ import SwiftUI
 struct FilterExlusionOptionView: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var viewmodel: SavedSearchViewModel
-    var selectedItem: FilterExclusionCategoryModel
+    @StateObject var filterExclusionOptionViewModel: FilterExlusionOptionViewModel
     
     var body: some View {
         VStack {
             ScrollView {
-                ForEach(selectedItem.options, id: \.self) { option in
+                ForEach(filterExclusionOptionViewModel.selectedItem.options, id: \.self) { option in
                     HStack {
                         if option.isSelected {
                             Image(systemName: "checkmark.square.fill")
@@ -32,7 +32,7 @@ struct FilterExlusionOptionView: View {
                         } else {
                             viewmodel.selectItem(filterType: option.value)
                         }
-                        presentationMode.wrappedValue.dismiss()
+                        filterExclusionOptionViewModel.toggleIsSelected(option: option)
                     }
                     Divider()
                 }
@@ -40,12 +40,12 @@ struct FilterExlusionOptionView: View {
             .padding()
             footerView()
         }
-        .navigationTitle(selectedItem.display)
+        .navigationTitle(filterExclusionOptionViewModel.selectedItem.display)
     }
     
     func footerView() -> some View {
         return VStack {
-            Button("SAVE EXCLUSIONS") {
+            Button("DONE") {
                 presentationMode.wrappedValue.dismiss()
             }
         }
@@ -53,5 +53,5 @@ struct FilterExlusionOptionView: View {
 }
 
 #Preview {
-    FilterExlusionOptionView(viewmodel: SavedSearchViewModel(savedFilterExclusions: []), selectedItem: FilterExclusionCategoryModel(id: nil, type: "", display: "", options: []))
+    FilterExlusionOptionView(viewmodel: SavedSearchViewModel(savedFilterExclusions: []), filterExclusionOptionViewModel: FilterExlusionOptionViewModel(selectedItem: FilterExclusionCategoryModel(id: nil, type: "", display: "", options: [])))
 }

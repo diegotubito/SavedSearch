@@ -8,29 +8,14 @@
 import SwiftUI
 
 struct SavedSearchView: View {
-    var viewmodel: SavedSearchViewModel
-    @Environment(\.presentationMode) var presentationMode
-    
     var body: some View {
         VStack {
-            Button("Remove All Selection") {
-                viewmodel.clearAllSelection()
-                presentationMode.wrappedValue.dismiss()
-            }
-            
-            NavigationLink {
-                FilterExclusionCategoryView(viewmodel: viewmodel)
-            } label: {
-                Text("Exclusion Filters")
-            }
-        }
-        .onAppear {
-            viewmodel.getFilterExclusionOptions()
+            Text("Start Here")
         }
     }
 }
 
 #Preview {
-    SavedSearchView(viewmodel: SavedSearchViewModel(savedFilterExclusions: []))
+    SavedSearchView()
 }
 
